@@ -6,7 +6,7 @@
 /*   By: maelmahf <maelmahf@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 11:54:24 by maelmahf          #+#    #+#             */
-/*   Updated: 2024/11/15 14:50:10 by maelmahf         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:07:30 by maelmahf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 void	ft_putchar(char c, int *count)
 {
-	write(1, &c, 1);
-	*count += 1;
+	ssize_t result = write(1, &c, 1);
+	if (result == -1)
+	{
+		*count = -1;
+	}
+	else
+	{
+		*count += 1;
+	}
 }

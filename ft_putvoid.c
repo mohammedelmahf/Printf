@@ -6,7 +6,7 @@
 /*   By: maelmahf <maelmahf@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:53:16 by maelmahf          #+#    #+#             */
-/*   Updated: 2024/11/15 14:53:28 by maelmahf         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:08:47 by maelmahf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,6 @@ void	ft_putvoid(void *s, int *count)
 	unsigned long	n;
 
 	n = (unsigned long)s;
-	if (n == 0)
-		ft_putstr("(nil)", count);
-	else
-	{
 		ft_putstr("0x", count);
 		ft_putnbr_base_void(n, 16, "0123456789abcdef", count);
-	}
 }

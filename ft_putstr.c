@@ -6,7 +6,7 @@
 /*   By: maelmahf <maelmahf@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:14:37 by maelmahf          #+#    #+#             */
-/*   Updated: 2024/11/15 14:49:52 by maelmahf         ###   ########.fr       */
+/*   Updated: 2024/11/15 16:08:04 by maelmahf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr(char *s, int *count)
 {
 	if (!s)
-		write(1, "(null)", 6);
+		ft_putstr("(null)", count);
 	else
 	{
 		while (*s)
