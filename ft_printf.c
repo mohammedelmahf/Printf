@@ -6,7 +6,7 @@
 /*   By: maelmahf <maelmahf@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:47:57 by maelmahf          #+#    #+#             */
-/*   Updated: 2024/11/15 16:10:22 by maelmahf         ###   ########.fr       */
+/*   Updated: 2024/11/16 13:50:02 by maelmahf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ int	ft_printf(const char *s, ...)
 			ft_print_format(*(++s), arg, &count);
 		else
 			ft_putchar(*s, &count);
-			if(count == -1)
-				return (-1);
+		if (count == -1)
+			return (-1);
 		s++;
 	}
 	va_end(arg);
